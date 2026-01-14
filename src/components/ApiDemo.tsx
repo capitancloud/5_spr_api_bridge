@@ -200,33 +200,14 @@ serve(async (req) => {
 });`;
 
   return (
-    <div className="space-y-8">
-      {/* Two column layout: Flow + Live Code */}
-      <div className="grid lg:grid-cols-[1fr,380px] gap-8">
-        {/* Left: Flow Animation */}
-        <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-6">
-          <ApiFlowAnimation currentStep={flowStep} query={query} />
-        </div>
-
-        {/* Right: Live Code Panel */}
-        <div className="hidden lg:block">
-          <DemoLiveCodePanel 
-            flowStep={flowStep} 
-            query={query || "Roma"} 
-            rawData={result ? {
-              city: result.city,
-              country: result.country,
-              temperature: result.temperature,
-              description: result.description,
-              humidity: result.humidity,
-              windSpeed: result.windSpeed,
-            } : null}
-          />
-        </div>
+    <div className="space-y-6">
+      {/* Flow Animation Box */}
+      <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-6">
+        <ApiFlowAnimation currentStep={flowStep} query={query} />
       </div>
 
-      {/* Mobile: Live Code Panel */}
-      <div className="lg:hidden">
+      {/* Live Code Panel Box */}
+      <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-4">
         <DemoLiveCodePanel 
           flowStep={flowStep} 
           query={query || "Roma"} 
