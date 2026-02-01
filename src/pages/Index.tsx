@@ -29,14 +29,19 @@ import { Hero } from "@/components/Hero";
 import { ApiDemo } from "@/components/ApiDemo";
 import { EducationCard } from "@/components/EducationCard";
 import { CodeBlock } from "@/components/ui/CodeBlock";
+import { LogoutButton } from "@/components/LogoutButton";
 import { Globe, Key, Shield, RefreshCw, Server, Code } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Header with Logout */}
+      <div className="fixed top-4 right-4 z-50">
+        <LogoutButton />
+      </div>
+
       {/* Hero Section */}
       <Hero />
-
       {/* Educational Section */}
       <section className="py-20 container">
         <motion.div
