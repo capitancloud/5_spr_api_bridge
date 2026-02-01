@@ -118,13 +118,6 @@ export function LoginScreen() {
               )}
             </Button>
           </form>
-
-          {/* Footer */}
-          <div className="mt-6 text-center">
-            <p className="text-xs text-muted-foreground">
-              🔒 Il codice viene verificato tramite hash SHA-256
-            </p>
-          </div>
         </div>
       </motion.div>
     </div>
