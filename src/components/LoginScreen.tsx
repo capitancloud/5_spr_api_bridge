@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Lock, KeyRound, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { KeyRound, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import superProgrammatoreLogo from '@/assets/super-programmatore-logo.png';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -44,19 +45,20 @@ export function LoginScreen() {
         className="w-full max-w-md"
       >
         <div className="rounded-2xl border border-border/50 bg-card/80 backdrop-blur-xl p-8 shadow-2xl">
-          {/* Header */}
+          {/* Header with Logo */}
           <div className="text-center mb-8">
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4"
+              className="mb-6"
             >
-              <Lock className="w-8 h-8 text-primary" />
+              <img 
+                src={superProgrammatoreLogo} 
+                alt="Super Programmatore" 
+                className="w-48 h-auto mx-auto"
+              />
             </motion.div>
-            <h1 className="text-2xl font-bold text-foreground mb-2">
-              API Bridge
-            </h1>
             <p className="text-muted-foreground text-sm">
               Inserisci il codice di accesso per continuare
             </p>
